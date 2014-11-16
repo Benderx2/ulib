@@ -106,7 +106,7 @@ void MultiplyMatrixbyVector2x2(matrix_t* matrix, vec2* vector)
 }
 void MultiplyMatrixbyVector3x3(matrix_t* matrix, vec3* vector)
 {
-	if(matrix->type != MATRIX_3x3) { printf("vec3 multiplication not supported with types other than 2x2 (for now)\n");
+	if(matrix->type != MATRIX_3x3) { printf("vec3 multiplication not supported with types other than 3x3 (for now)\n");
 	return;
 	}
 	float save_x = vector->x;
@@ -126,7 +126,7 @@ void MultiplyMatrixbyVector3x3(matrix_t* matrix, vec3* vector)
 }
 void MultiplyMatrixbyVector4x4(matrix_t* matrix, vec4* vector)
 {
-	if(matrix->type != MATRIX_4x4) { printf("vec4 multiplication not supported with types other than 2x2 (for now)\n");
+	if(matrix->type != MATRIX_4x4) { printf("vec4 multiplication not supported with types other than 4x4 (for now)\n");
 	return;
 	}
 	float save_x = vector->x;
