@@ -12,9 +12,12 @@ typedef struct _matrix {
 } matrix_t;
 typedef struct __matrix_construct {
 	matrix_t* (*CreateMatrix)(int);
-	void (*MultiplyMatrixbyVector2x2)(matrix_t*, vec2*);
-	void (*MultiplyMatrixbyVector3x3)(matrix_t*, vec3*);
-	void (*MultiplyMatrixbyVector4x4)(matrix_t*, vec4*);
+	vec2* (*MultiplyMatrixbyVector2x2)(matrix_t*, vec2*);
+	vec3* (*MultiplyMatrixbyVector3x3)(matrix_t*, vec3*);
+	vec4* (*MultiplyMatrixbyVector4x4)(matrix_t*, vec4*);
+	matrix_t* (*MultiplyMatrixbyMatrix2x2)(matrix_t*, matrix_t*);
+	matrix_t* (*MultiplyMatrixbyMatrix3x3)(matrix_t*, matrix_t*);
+	matrix_t* (*MultiplyMatrixbyMatrix4x4)(matrix_t*, matrix_t*);
 	void (*PrintMatrix)(matrix_t*);
 	matrix_t IdentityMatrix2x2;
 	matrix_t IdentityMatrix3x3;
